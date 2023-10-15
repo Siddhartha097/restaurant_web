@@ -1,0 +1,145 @@
+.app__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-black);
+    padding: 1.3rem 2.2rem;
+}
+
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.app__navbar-logo img {
+    width: 170px;
+}
+
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.app__navbar-links li {
+    font-family: var(--font-jasefin);
+    margin: 0 1.3rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.app__navbar-links li:hover {
+    color: var(--color-golden);
+}
+
+.app__navbar-login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.app__navbar-login a {
+    margin: 0 1.2rem;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: var(--font-jasefin);
+}
+
+.app__navbar-login a:hover {
+    border-bottom: 1.5px solid var(--color-gray);
+}
+
+.app__navbar-login div {
+    width: 2px;
+    height: 35px;
+    background-color: var(--color-gray);
+}
+
+.app__navbar-smallscreen {
+    display: none;
+
+}
+
+.app__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    transition: 0.5s ease;
+    flex-direction: column;
+    z-index: 6;
+
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+    font-size: 28px;
+    color: var(--color-golden);
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.app__navbar-smallscreen_links {
+    list-style: none;
+    
+}
+
+.app__navbar-smallscreen_links li {
+    margin: 2.6rem;
+    cursor: pointer;
+    font-size: 3.2rem;
+    text-align: center;
+    font-family: var(--font-coveat);
+    color: var(--color-golden);
+}
+
+.app__navbar-smallscreen_links li:hover {
+    color: var(--color-white);
+}
+
+@media screen and (max-width: 2000px) {
+    .app__navbar-logo img {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .app__navbar-links {
+        display: none;
+    }
+
+    .app__navbar-smallscreen {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__navbar {
+        padding: 1.3rem;
+    }
+
+    .app__navbar-login {
+        display: none;
+    }
+
+    .app__navbar-logo img {
+        width: 130px;
+    }
+}
+
+
